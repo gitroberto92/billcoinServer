@@ -1,0 +1,27 @@
+{
+  "appenders": {
+    "file": {
+      "type": "file",
+      "filename": "logs/test_client.log",
+      "maxLogSize": 102400,
+      "backups": 5,
+      "compress": true,
+      "encoding": "utf-8",
+      "flags": "w+"
+      },
+    "dateFile": {
+      "type": "dateFile",
+      "filename": "logs/hist_test_client.log",
+      "pattern": "yyyy-MM-dd-hh",
+      "compress": true
+      },
+    "out": {
+      "type": "console"
+      }
+  },
+  "categories": {
+    "default": { 
+        "appenders": ["file", "out"], "level": "trace"
+      }
+  }
+}
